@@ -1,0 +1,34 @@
+base_model: TFMC/Japanese-Starling-ChatV-7B
+gate_mode: cheap_embed
+dtype: bfloat16
+experts:
+  - source_model: TFMC/Japanese-Starling-ChatV-7B
+    positive_prompts:
+    - "sex"
+    - "roleplay"
+    - "question"
+    - "answer"
+    - "chat"
+    - "companion"
+    - "storywriting"
+    - "book"
+    - "story"
+    - "chapter"
+    - "tale"
+    - "history"
+    - "write"
+    - "[Mode: Roleplay]"
+    - "[Mode: Chat]"
+    - "[Mode: Writing]"
+    negative_prompts:
+    - "code"
+    - "python"
+    - "process"
+    - "[Mode: Coding]"
+  - source_model: 
+    positive_prompts:
+    - "code"
+    - "python"
+    - "process"
+    - "[Mode: Coding]"
+tokenizer_source: union
